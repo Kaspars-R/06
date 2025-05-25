@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+	<meta charset="UTF-8">
+	<title>Skolēna atzīmes</title>
+</head>
+<body>
+	<h1>Skolēna atzīmes</h1>
+	<input type="text" id="name" placeholder="Ievadi vārdu">
+	<button onclick="getGrades()">Apskatīt atzīmes</button>
+
+	<div id="result"></div>
+
+	<script>
+		function getGrades() {
+			const name = document.getElementById('name').value;
+			fetch(`/students/${name}`)
+				.then(response => {
+					if (!response.ok) {
+						throw new Error("Nav atrasts");
+					}
+					return response.json();
+				})
+				.then(data => {
+					let grades = data.grades;
+					let result = `<h2>Atzīmes ${data.name}:</h2><ul>`;
+					for (let subject in grades) {
+						result += `<li>${subject}: ${grades[subject]}</li>`;
+					}
+					result += '</ul>';
+					document.getElementById('result').innerHTML = result;
+				})
+				.catch(error => {
+					document.getElementById('result').innerHTML = "Skolēns nav atrasts.";
+				});
+		}
+	</script>
+</body>
+</html>

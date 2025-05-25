@@ -1,0 +1,30 @@
+{
+    "a": {
+        "matem\u0101tika": "4",
+        "v\u0113sture": "6",
+        "fizika": "5",
+        "latvie\u0161u": "1",
+        "biolo\u0123ija": "7"
+    },
+    "ss": {
+        "matem\u0101tika": "4",
+        "v\u0113sture": "4",
+        "fizika": "4",
+        "latvie\u0161u": "4",
+        "biolo\u0123ija": "4"
+    },
+    "2222": {
+        "matem\u0101tika": "2",
+        "v\u0113sture": "6",
+        "fizika": "5",
+        "latvie\u0161u": "7",
+        "biolo\u0123ija": "7"
+    },
+    "Jan\u010duks": {
+        "matem\u0101tika": "2",
+        "v\u0113sture": "3",
+        "fizika": "",
+        "latvie\u0161u": "7",
+        "biolo\u0123ija": "7"
+    }
+}
